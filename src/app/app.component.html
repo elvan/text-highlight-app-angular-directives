@@ -8,7 +8,17 @@
       <br /><br />
 
       <ul class="list-group">
-        <li class="list-group-item"></li>
+        <div *ngIf="onlyOdd">
+          <li *ngFor="let num of oddNumbers" class="list-group-item">
+            {{ num }}
+          </li>
+        </div>
+
+        <div *ngIf="!onlyOdd">
+          <li *ngFor="let num of evenNumbers" class="list-group-item">
+            {{ num }}
+          </li>
+        </div>
       </ul>
 
       <ng-template [ngIf]="onlyOdd">
