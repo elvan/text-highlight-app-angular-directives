@@ -12,4 +12,6 @@ export class AppComponent {
   evenNumbers = [2, 4, 6];
 
   onlyOdd = false;
+
+  value = 20;
 }
