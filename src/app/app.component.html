@@ -18,14 +18,24 @@
           </li>
         </div>
 
-        <div *ngIf="!onlyOdd">
+        <!-- <div *ngIf="!onlyOdd">
           <li
             *ngFor="let num of evenNumbers"
             class="list-group-item"
             [ngClass]="{ even: num % 2 === 0 }">
             {{ num }}
           </li>
-        </div>
+        </div> -->
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li
+              *ngFor=" let num of evenNumbers"
+              class="list-group-item"
+              [ngClass]="{ even: num % 2 === 0 }">
+              {{ num }}
+            </li>
+          </div>
+        </ng-template>
       </ul>
 
       <p appBasicHighlight>Style me with the basic-highlight</p>
